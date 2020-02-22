@@ -1,0 +1,35 @@
+{
+  "name": "LunchPadProject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "client": "cd client && npm run start",
+    "start": "node ./server/server.js",
+    "server": "nodemon ./server/server.js",
+    "build": "cd client && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaqootturman/LunchPadProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaqootturman/LunchPadProject/issues"
+  },
+  "homepage": "https://github.com/yaqootturman/LunchPadProject#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "pg": "^7.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
