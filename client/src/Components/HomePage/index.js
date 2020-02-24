@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import CustomerCard from '../CustomerCard'
 import axios from 'axios'
 import wallpaper from '../../images/h1.jpg'
-import ClipLoader from "react-spinners/ClipLoader";
+import ClipLoader from "react-spinners/ClipLoader"
+import { Link } from 'react-router-dom'
 import './style.css'
 
 class HomePage extends Component {
@@ -26,6 +27,8 @@ class HomePage extends Component {
   render() {
     const { loading, customersList } = this.state;
 
+    console.log("this", this);
+
     return (
       <div className="home-page">
         <div className="greeting">
@@ -43,6 +46,8 @@ class HomePage extends Component {
               />
             </div>)
         }
+        <button type="button" class="btn btn-primary" onClick={() => { this.props.history.push('/newCustomer') }}>+</button>
+
 
 
       </div>
