@@ -3,6 +3,7 @@ const express = require('express')
 const app = express();
 const router = require('./controllers')
 
+
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')))
 
 app.use(express.json())
