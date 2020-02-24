@@ -7,6 +7,7 @@ const router = require('./controllers')
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')))
 
 app.use(express.json())
+
 app.use(express.urlencoded())
 app.use(router)
 
