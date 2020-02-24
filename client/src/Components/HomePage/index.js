@@ -3,6 +3,7 @@ import CustomerCard from '../CustomerCard'
 import axios from 'axios'
 import ClipLoader from "react-spinners/ClipLoader"
 import { Link } from 'react-router-dom'
+import wallpaper from '../../images/wallpaper.png'
 import './style.css'
 
 class HomePage extends Component {
@@ -29,8 +30,9 @@ class HomePage extends Component {
     return (
       <div className="home-page">
         <div className="greeting">
-          <h1 className="greeting__hello">Hello</h1>
+          <img className="greeting__hello" src={wallpaper} />
         </div>
+
 
         {
           !loading ? <CustomerCard customersList={customersList} /> :
@@ -47,7 +49,7 @@ class HomePage extends Component {
 
 
 
-      </div>
+      </div >
     )
 
   }

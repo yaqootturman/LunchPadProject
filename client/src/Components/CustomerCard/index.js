@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import HomePage from '../HomePage'
+import './style.css'
 import axios from 'axios';
 
 class CustomerCard extends Component {
@@ -41,7 +41,7 @@ class CustomerCard extends Component {
     const { customersList } = this.props;
 
     return (
-      <>
+      <div className="list">
         <h5>List of customers</h5>
         <button type="button" class="btn btn-primary" onClick={this.deleteCustomer}>Delete</button>
         {
@@ -49,7 +49,7 @@ class CustomerCard extends Component {
             <div className="card">
               <div class="card-body">
                 <div>
-                  <button onClick={() => window.print()}>PRINT</button>
+                  <button className="btn btn-secondary " onClick={() => window.print()}>PRINT</button>
                 </div>
                 <label className="checkboxLabel">
                   <input
@@ -61,19 +61,53 @@ class CustomerCard extends Component {
                   />
                   Delete
                 </label>
-                <h5 className="card-title">First name: {customer.first_name}</h5>
-                <p className="card-text"> Last name: {customer.last_name}</p>
-                <p className="card-text"> email: {customer.email}</p>
-                <p className="card-text"> birthday: {customer.birthday}</p>
-                <p className="card-text"> gender: {customer.gender}</p>
-                <p className="card-text"> city: {customer.city}</p>
+                <div className="card-title">
+                  <span className=" material-icons">
+                    &#xe87c;
+                  </span>
+                  <span>
+                    {customer.first_name}{customer.last_name}
+                  </span>
+                </div>
+                <div className="card-title">
+                  <span className="material-icons">
+                    &#xe0be;
+                  </span>
+                  <span>
+                    {customer.email}
+                  </span>
+                </div>
+                <div className="card-title">
+                  <span className="material-icons">
+                    &#xf1fd;
+                  </span>
+                  <span>
+                    {customer.birthday}
+                  </span>
+                </div>
+                <div className="card-title">
+                  <span className="material-icons">
+                    &#xf224;
+                  </span>
+                  <span>
+                    {customer.gender}
+                  </span>
+                </div>
+                <div className="card-title">
+                  <span className="material-icons">
+                    &#xe7f1;
+                  </span>
+                  <span>
+                    {customer.city}
+                  </span>
+                </div>
               </div>
             </div>
 
           ))
         }
 
-      </>
+      </div>
 
     )
   }
