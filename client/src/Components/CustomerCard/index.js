@@ -43,7 +43,7 @@ class CustomerCard extends Component {
     return (
       <div className="list">
         <h5>List of customers</h5>
-        <button type="button" class="btn btn-primary" onClick={this.deleteCustomer}>Delete</button>
+        <button type="button" class="btn btn-danger" onClick={this.deleteCustomer}>Delete</button>
         {
           customersList.map(customer => (
             <div className="card">
@@ -62,7 +62,7 @@ class CustomerCard extends Component {
                   Delete
                 </label>
                 <div className="card-title">
-                  <span className=" material-icons">
+                  <span className="material-icons">
                     &#xe87c;
                   </span>
                   <span>

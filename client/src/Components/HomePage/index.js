@@ -45,7 +45,7 @@ class HomePage extends Component {
               />
             </div>)
         }
-        <button type="button" class="btn btn-primary" onClick={() => { this.props.history.push('/newCustomer') }}>+</button>
+        <button type="button" class="btn btn-primary btn-add" onClick={() => { this.props.history.push('/newCustomer') }}>+</button>
 
 
 

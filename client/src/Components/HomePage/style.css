@@ -6,8 +6,8 @@ margin:15px;
 .greeting{
   display: block;
   justify-content: center;
-  width: 100vw;
-padding-left:20%;
+  width: 80vw;
+  padding-left:30%;
 }
 
 .greeting__hello{
@@ -19,4 +19,7 @@ padding-left:20%;
   margin-left:20px;
   /* font-family: 'Akronim' ; */
   /* font-size: 544%; */
+}
+.btn-add{
+  margin-top:12px;
 }
