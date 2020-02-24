@@ -24,7 +24,9 @@ class AddCustomer extends Component {
     const { value } = event.target
     this.setState({ gender: value })
   }
-  AddCustomer = () => {
+  AddCustomer = (e) => {
+    e.preventDefault()
+
     const { customerName, LastName, email, birthday, city, gender } = this.state
 
     axios.post('/api/newCustomer', {
@@ -36,9 +38,9 @@ class AddCustomer extends Component {
       city
     })
       .then(res => {
-        console.log("let us see the res ", res);
-
+        this.props.history.push("/")
       })
+
   }
 
   render() {
