@@ -24,13 +24,29 @@ class AddCustomer extends Component {
     const { value } = event.target
     this.setState({ gender: value })
   }
+  AddCustomer = () => {
+    const { customerName, LastName, email, birthday, city, gender } = this.state
+
+    axios.post('/api/newCustomer', {
+      customerName,
+      LastName,
+      email,
+      birthday,
+      gender,
+      city
+    })
+      .then(res => {
+        console.log("let us see the res ", res);
+
+      })
+  }
 
   render() {
     const { customerName, LastName, email, birthday, city, gender } = this.state
     return (
       <>
         <h3>fill the information to add new customer</h3>
-        <form>
+        <form onSubmit={this.AddCustomer}>
           <label>
             <input className="info"
               onChange={this.updateInput}
@@ -83,6 +99,7 @@ class AddCustomer extends Component {
               name="city">
             </input>
           </label>
+          <input type="submit" value="Add" className="submitInfo" />
         </form>
       </>
     )
