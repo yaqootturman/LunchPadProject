@@ -6,15 +6,17 @@ margin:15px;
 .greeting{
   display: block;
   justify-content: center;
-  text-align: center;
-  margin: 15%;  
-
+  width: 100vw;
+padding-left:20%;
 }
 
 .greeting__hello{
   justify-content: center;
   color:indianred;
-  margin:20px;
-  font-family: 'Akronim' ;
-  font-size: 544%;
+  display:block;
+  width: 50%;
+  height: 50%;
+  margin-left:20px;
+  /* font-family: 'Akronim' ; */
+  /* font-size: 544%; */
 }
