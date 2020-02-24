@@ -1,0 +1,13 @@
+.add-page{
+  text-align: center;
+  margin: 5%;
+
+}
+.add-page__form{
+  margin-top: 5%;
+  width: 50%;
+  display: inline-block;
+}
+.info{
+  display: block;
+}

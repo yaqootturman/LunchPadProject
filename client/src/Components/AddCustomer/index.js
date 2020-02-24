@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import DatePicker from 'react-date-picker';
-
+import './style.css'
 import axios from "axios"
 
 
@@ -46,11 +46,11 @@ class AddCustomer extends Component {
   render() {
     const { customerName, LastName, email, birthday, city, gender } = this.state
     return (
-      <>
-        <h3>fill the information to add new customer</h3>
-        <form onSubmit={this.AddCustomer}>
-          <label>
-            <input className="info"
+      <div className="add-page">
+        <h3>Fill the information to add new customer</h3>
+        <form className="add-page__form" onSubmit={this.AddCustomer}>
+          <label className="info">
+            <input
               onChange={this.updateInput}
               value={customerName}
               type="text"
@@ -58,8 +58,8 @@ class AddCustomer extends Component {
               name="customerName">
             </input>
           </label>
-          <label>
-            <input className="info"
+          <label className="info">
+            <input
               onChange={this.updateInput}
               value={LastName}
               type="text"
@@ -67,8 +67,8 @@ class AddCustomer extends Component {
               name="LastName">
             </input>
           </label>
-          <label>
-            <input className="info"
+          <label className="info">
+            <input
               onChange={this.updateInput}
               value={email}
               type="text"
@@ -76,7 +76,7 @@ class AddCustomer extends Component {
               name="email">
             </input>
           </label>
-          <label>
+          <label className="info">
             <DatePicker
               format='yyyy-MM-dd'
               value={birthday}
@@ -92,8 +92,8 @@ class AddCustomer extends Component {
             <input type="radio" value="Male" checked={gender === 'Male'} onChange={this.handleOptionChange} />
             MAle
           </label>
-          <label>
-            <input className="info"
+          <label className="info">
+            <input
               onChange={this.updateInput}
               value={city}
               type="text"
@@ -103,7 +103,7 @@ class AddCustomer extends Component {
           </label>
           <input type="submit" value="Add" className="submitInfo" />
         </form>
-      </>
+      </div>
     )
   }
 }
