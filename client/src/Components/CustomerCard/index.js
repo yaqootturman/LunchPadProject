@@ -48,6 +48,9 @@ class CustomerCard extends Component {
           customersList.map(customer => (
             <div className="card">
               <div class="card-body">
+                <div>
+                  <button onClick={() => window.print()}>PRINT</button>
+                </div>
                 <label className="checkboxLabel">
                   <input
                     className="checkboxInfo"
