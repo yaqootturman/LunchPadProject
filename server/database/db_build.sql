@@ -10,7 +10,7 @@ CREATE TABLE customer
     last_name VARCHAR(100) ,
     email VARCHAR(50) UNIQUE,
     Birthday DATE NOT NULL,
-    Gender CHAR(1) NOT NULL,
+    Gender varchar(6) NOT NULL,
     City VARCHAR(100) NOT NULL
 );
 
