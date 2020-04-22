@@ -1,3 +1,3 @@
 # LunchPadProject
 
-[![Build Status](https://travis-ci.com/GSG-K3/rooms-booker.svg?branch=master)](https://travis-ci.com/GSG-K3/rooms-booker)
+[![Build Status](https://travis-ci.com/yaqootturman/LunchPadProject.svg?branch=master)](https://travis-ci.com/yaqootturman/LunchPadProject)
